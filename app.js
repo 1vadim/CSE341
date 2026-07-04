@@ -15,6 +15,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend server is running! Use /professional to get data.");
+});
+
 app.use("/professional", professionalRoutes);
 
 mongodb.initDb((err, mongodb) => {
