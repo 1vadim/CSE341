@@ -50,15 +50,19 @@ function displayLinkTitleText(data) {
 }
 
 function displayLinkedInLink(data) {
-  let linkedInLink = document.getElementById('linkedInLink');
-  linkedInLink.innerHTML = data.linkedInLink.text;
-  linkedInLink.href = data.linkedInLink.link;
+  let linkedInLink = document.getElementById("linkedInLink");
+  if (data.linkedInLink) {
+    linkedInLink.innerHTML = data.linkedInLink.text || "LinkedIn";
+    linkedInLink.href = data.linkedInLink.link || "#";
+  }
 }
 
 function displayGitHubLink(data) {
-  let githubLink = document.getElementById('githubLink');
-  githubLink.innerHTML = data.githubLink.text;
-  githubLink.href = data.githubLink.link;
+  let githubLink = document.getElementById("githubLink");
+  if (data.githubLink) {
+    githubLink.innerHTML = data.githubLink.text || "GitHub";
+    githubLink.href = data.githubLink.link || "#";
+  }
 }
 
 getData();

@@ -2,11 +2,11 @@
   "name": "cse341",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "start-prod": "node server.js"
+    "start": "nodemon app.js",
+    "start-prod": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,12 @@
   },
   "homepage": "https://github.com/1vadim/CSE341#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.4.0",
+    "mongoose": "^9.7.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
